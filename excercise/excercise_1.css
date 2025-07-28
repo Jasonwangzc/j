@@ -1,0 +1,55 @@
+
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    margin: 0 auto;
+    padding: 0px;
+    background-color:red;
+    border: 2px solid black;
+    border-radius: 25px;
+    width : 35%;
+   }
+h1{
+    text-align:left;
+    color: black;
+    font-size: 40px;
+    font-weight: bold;
+}
+.hobbies{
+    text-align: center;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+}
+ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    }
+
+.basic_info{    
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    margin: 0px;
+    padding: 0px;
+    color: white;
+}
+
+.second_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 0px;
+    border-radius: 0px;
+    background-color: darkred;
+}
+img{
+    width: 200px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5%;
+}
