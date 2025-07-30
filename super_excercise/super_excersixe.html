@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <!-- 响应式基础配置：确保移动端正确缩放 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>我的个人作品集 | 前端开发者</title>
+  <!-- 引入外部图标库（用于导航、按钮、技能图标等） -->
+  <link rel="stylesheet" href="">
+  <!-- 引入你的CSS文件（后续在此编写样式） -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 导航栏：固定在顶部，滚动时变化样式 -->
+  <header class="navbar">
+    <div class="container">
+      <!-- Logo区域 -->
+      <a href=" " class="navbar__logo">
+        <span class="logo__text">DevPortfolio</span>
+      </a >
+
+      <!-- 桌面端导航链接 -->
+      <nav class="navbar__desktop">
+        <ul class="nav__links">
+          <li class="nav__item"><a href="#home" class="nav__link">首页</a ></li>
+          <li class="nav__item"><a href="#projects" class="nav__link">项目</a ></li>
+          <li class="nav__item"><a href="#skills" class="nav__link">技能</a ></li>
+          <li class="nav__item"><a href="#about" class="nav__link">关于我</a ></li>
+          <li class="nav__item"><a href="#contact" class="nav__link">联系我</a ></li>
+        </ul>
+      </nav>
+
+      <!-- 移动端汉堡菜单按钮 -->
+      <button class="navbar__toggle" aria-label="打开菜单">
+        <<i class="fas fa-bars"></</i>
+      </button>
+    </div>
+
+    <!-- 移动端导航菜单（默认隐藏，点击汉堡按钮展开） -->
+    <nav class="navbar__mobile">
+      <ul class="mobile__links">
+        <li class="mobile__item"><a href="#home" class="mobile__link">首页</a ></li>
+        <li class="mobile__item"><a href="#projects" class="mobile__link">项目</a ></li>
+        <li class="mobile__item"><a href="#skills" class="mobile__link">技能</a ></li>
+        <li class="mobile__item"><a href="#about" class="mobile__link">关于我</a ></li>
+        <li class="mobile__item"><a href="#contact" class="mobile__link">联系我</a ></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- 英雄区：全屏展示，突出个人定位 -->
+  <section id="home" class="hero">
+    <div class="container hero__container">
+      <div class="hero__content">
+        <h1 class="hero__title">
+          你好，我是 <span class="hero__highlight">林前端</span><br>
+          专注交互体验的开发者
+        </h1>
+        <p class="hero__desc">
+          用代码构建美观、高效的网页，让每个细节都充满设计感
+        </p >
+        <div class="hero__buttons">
+          <a href="#projects" class="btn btn--primary">查看我的项目</a >
+          <a href="#contact" class="btn btn--secondary">联系我</a >
+        </div>
+      </div>
+    </div>
+    <!-- 背景装饰元素（可通过CSS添加渐变/图片） -->
+    <div class="hero__bg"></div>
+  </section>
+
+  <!-- 项目展示区：用网格布局展示作品 -->
+  <section id="projects" class="projects">
+    <div class="container">
+      <!-- 区域标题 -->
+      <div class="section__header">
+        <h2 class="section__title">我的项目</h2>
+        <p class="section__subtitle">精选作品展示，每一个都凝聚思考与创意</p >
+      </div>
+
+      <!-- 项目网格容器 -->
+      <div class="projects__grid">
+        <!-- 项目卡片1 -->
+        <article class="project__card">
+          <div class="project__img-container">
+            < img src="https://picsum.photos/seed/proj1/600/400" alt="电商网站项目截图" class="project__img">
+          </div>
+          <div class="project__content">
+            <span class="project__category">电商网站</span>
+            <h3 class="project__title">响应式电商平台</h3>
+            <p class="project__desc">
+              基于HTML、CSS和JavaScript开发的全功能电商网站，支持商品筛选、购物车管理和响应式布局。
+            </p >
+            <div class="project__tags">
+              <span class="tag">HTML5</span>
+              <span class="tag">CSS3</span>
+              <span class="tag">JavaScript</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 项目卡片2 -->
+        <article class="project__card">
+          <div class="project__img-container">
+            < img src="https://picsum.photos/seed/proj2/600/400" alt="博客网站项目截图" class="project__img">
+          </div>
+          <div class="project__content">
+            <span class="project__category">博客系统</span>
+            <h3 class="project__title">极简风格技术博客</h3>
+            <p class="project__desc">
+              采用现代设计语言的个人博客，包含文章分类、深色模式切换和流畅的滚动动画效果。
+            </p >
+            <div class="project__tags">
+              <span class="tag">Flexbox</span>
+              <span class="tag">Grid</span>
+              <span class="tag">动画</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 项目卡片3 -->
+        <article class="project__card">
+          <div class="project__img-container">
+            < img src="https://picsum.photos/seed/proj3/600/400" alt="天气应用项目截图" class="project__img">
+          </div>
+          <div class="project__content">
+            <span class="project__category">工具应用</span>
+            <h3 class="project__title">实时天气查询工具</h3>
+            <p class="project__desc">
+              调用天气API实现的实时天气应用，支持城市搜索、温度单位切换和动态天气图标。
+            </p >
+            <div class="project__tags">
+              <span class="tag">API</span>
+              <span class="tag">响应式</span>
+              <span class="tag">CSS动画</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 项目卡片4 -->
+        <article class="project__card">
+          <div class="project__img-container">
+            < img src="https://picsum.photos/seed/proj4/600/400" alt="作品集网站项目截图" class="project__img">
+          </div>
+          <div class="project__content">
+            <span class="project__category">个人网站</span>
+            <h3 class="project__title">设计师作品集网站</h3>
+            <p class="project__desc">
+              为设计师打造的极简风格作品集，突出作品展示，包含平滑滚动和交互动画效果。
+            </p >
+            <div class="project__tags">
+              <span class="tag">Flexbox</span>
+              <span class="tag">Grid</span>
+              <span class="tag">动画过渡</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 技能展示区：进度条+图标展示能力 -->
+  <section id="skills" class="skills">
+    <div class="container">
+      <div class="section__header">
+        <h2 class="section__title">我的技能</h2>
+        <p class="section__subtitle">不断学习，持续提升技术栈</p >
+      </div>
+
+      <div class="skills__container">
+        <!-- 技术技能进度条 -->
+        <div class="skills__tech">
+          <h3 class="skills__title">技术能力</h3>
+          
+          <div class="skill__item">
+            <div class="skill__info">
+              <span class="skill__name">HTML5</span>
+              <span class="skill__percent">95%</span>
+            </div>
+            <div class="skill__bar">
+              <div class="skill__progress" style="width: 95%"></div>
+            </div>
+          </div>
+
+          <div class="skill__item">
+            <div class="skill__info">
+              <span class="skill__name">CSS3</span>
+              <span class="skill__percent">90%</span>
+            </div>
+            <div class="skill__bar">
+              <div class="skill__progress" style="width: 90%"></div>
+            </div>
+          </div>
+
+          <div class="skill__item">
+            <div class="skill__info">
+              <span class="skill__name">JavaScript</span>
+              <span class="skill__percent">75%</span>
+            </div>
+            <div class="skill__bar">
+              <div class="skill__progress" style="width: 75%"></div>
+            </div>
+          </div>
+
+          <div class="skill__item">
+            <div class="skill__info">
+              <span class="skill__name">响应式设计</span>
+              <span class="skill__percent">85%</span>
+            </div>
+            <div class="skill__bar">
+              <div class="skill__progress" style="width: 85%"></div>
+            </div>
+          </div>
+
+          <div class="skill__item">
+            <div class="skill__info">
+              <span class="skill__name">UI/UX 基础</span>
+              <span class="skill__percent">70%</span>
+            </div>
+            <div class="skill__bar">
+              <div class="skill__progress" style="width: 70%"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 工具技能图标 -->
+        <div class="skills__tools">
+          <h3 class="skills__title">工具与框架</h3>
+          <div class="tools__grid">
+            <div class="tool__item" title="VS Code">
+              <<i class="fas fa-code"></</i>
+              <span class="tool__name">VS Code</span>
+            </div>
+            <div class="tool__item" title="Git">
+              <<i class="fab fa-git"></</i>
+              <span class="tool__name">Git</span>
+            </div>
+            <div class="tool__item" title="Figma">
+              <<i class="fab fa-figma"></</i>
+              <span class="tool__name">Figma</span>
+            </div>
+            <div class="tool__item" title="Sass">
+              <<i class="fab fa-sass"></</i>
+              <span class="tool__name">Sass</span>
+            </div>
+            <div class="tool__item" title="Bootstrap">
+              <<i class="fab fa-bootstrap"></</i>
+              <span class="tool__name">Bootstrap</span>
+            </div>
+            <div class="tool__item" title="Chrome DevTools">
+              <<i class="fas fa-tools"></</i>
+              <span class="tool__name">DevTools</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 关于我区域：个人介绍+照片 -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="section__header">
+        <h2 class="section__title">关于我</h2>
+        <p class="section__subtitle">了解我的故事与理念</p >
+      </div>
+
+      <div class="about__content">
+        <div class="about__img-container">
+          < img src="https://picsum.photos/seed/about/400/500" alt="个人照片" class="about__img">
+        </div>
+        <div class="about__text">
+          <h3 class="about__title">你好！我是一名热爱前端的开发者</h3>
+          <p class="about__desc">
+            我拥有3年前端开发经验，专注于通过代码将设计转化为优秀的用户体验。我相信"细节决定成败"，每个像素的调整、每个动画的节奏，都会影响用户的感受。
+          </p >
+          <p class="about__desc">
+            我的技术栈以HTML、CSS、JavaScript为核心，擅长响应式设计和交互动画。我热衷于学习新技术，从CSS Grid到动画库，不断拓展自己的能力边界。
+          </p >
+          <blockquote class="about__quote">
+            "好的设计是隐形的，当你注意不到它时，它才是最好的。"
+          </blockquote>
+          <a href="#contact" class="btn btn--primary about__btn">联系我</a >
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 联系方式区域：表单+联系信息 -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="section__header">
+        <h2 class="section__title">联系我</h2>
+        <p class="section__subtitle">随时欢迎交流与合作</p >
+      </div>
+
+      <div class="contact__container">
+        <!-- 联系信息 -->
+        <div class="contact__info">
+          <h3 class="contact__title">联系方式</h3>
+          <div class="contact__details">
+            <div class="contact__item">
+              <<i class="fas fa-envelope contact__icon"></</i>
+              <span class="contact__text">hello@devportfolio.com</span>
+            </div>
+            <div class="contact__item">
+              <<i class="fas fa-phone contact__icon"></</i>
+              <span class="contact__text">+86 123 4567 8910</span>
+            </div>
+            <div class="contact__item">
+              <<i class="fas fa-map-marker-alt contact__icon"></</i>
+              <span class="contact__text">北京市朝阳区创意园区A座</span>
+            </div>
+          </div>
+
+          <!-- 社交链接 -->
+          <div class="contact__social">
+            <h4 class="social__title">关注我</h4>
+            <div class="social__links">
+              <a href="#" class="social__link" title="GitHub"><<i class="fab fa-github"></</i></a >
+              <a href="#" class="social__link" title="LinkedIn"><<i class="fab fa-linkedin"></</i></a >
+              <a href="#" class="social__link" title="Twitter"><<i class="fab fa-twitter"></</i></a >
+              <a href="#" class="social__link" title="CodePen"><<i class="fab fa-codepen"></</i></a >
+            </div>
+          </div>
+        </div>
+
+        <!-- 联系表单 -->
+        <div class="contact__form-container">
+          <form class="contact__form">
+            <h3 class="form__title">发送消息</h3>
+            <div class="form__group">
+              <label for="name" class="form__label">姓名</label>
+              <input type="text" id="name" class="form__input" placeholder="请输入你的姓名">
+            </div>
+            <div class="form__group">
+              <label for="email" class="form__label">邮箱</label>
+              <input type="email" id="email" class="form__input" placeholder="请输入你的邮箱">
+            </div>
+            <div class="form__group">
+              <label for="message" class="form__label">消息</label>
+              <textarea id="message" class="form__textarea" rows="5" placeholder="请输入你想对我说的话"></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary form__submit">发送消息</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 页脚：版权信息+导航链接 -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <div class="footer__logo">DevPortfolio</div>
+        <p class="footer__copyright">
+          © 2023 我的个人作品集 | 用代码创造美好体验
+        </p >
+        <nav class="footer__links">
+          <a href="#home" class="footer__link">首页</a >
+          <a href="#projects" class="footer__link">项目</a >
+          <a href="#skills" class="footer__link">技能</a >
+          <a href="#about" class="footer__link">关于我</a >
+          <a href="#contact" class="footer__link">联系我</a >
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 回到顶部按钮（滚动时显示） -->
+  <button class="back-to-top" aria-label="回到顶部">
+    <<i class="fas fa-arrow-up"></</i>
+  </button>
+</body>
+</html>

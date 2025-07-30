@@ -1,0 +1,40 @@
+.container{
+    background-color: white;
+    background-image: 
+    url(top-image.png),
+    url(bottom-image.png),
+    linear-gradient(to right, #f0f0f0, #d9d9d9);
+    background-repeat: no-repeat ,no-repeat;
+    background-position: top center, bottom center;
+    background-size: 100% , 100% ;
+    margin : 0 auto;
+    padding : 50px;
+    width :35%;
+    min-height: 900px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-bottom : 3px solid #0e0d0d ;
+    border-top: #0e0d0d 3px solid;
+    margin: 0 auto;
+    position : relative;
+
+    
+}
+h1{
+    display: inline-block;
+    background-image: url(logo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    padding : 50px 50px;
+    margin: 0;
+    color: white;
+    font-size: 20px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+    position: absolute;
+    left: 10px;
+    top: 40px;
+}
+address{ 
+    position:absolute;
+    right: 20px;
+    bottom: 40px;
+}

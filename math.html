@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUnction library example</title>
+</head>
+<body>
+<style>
+    body{
+        margin:0  auto;
+        padding: 10px;
+        border-radius: 10%;
+        border: 5px solid black;
+        width: fit-content;
+        min-height: 200px;
+    }
+    
+    input {
+        margin-right: 10px;
+        font-style: new times roman;
+        font-size: 20px;
+    }
+    #results {
+        font-size: 20px;
+        color: blue;
+        font-weight: bold;
+    }
+</style>
+
+    <input class="number" placeholder="Enter a number"> 
+    <button>Calculate</button>
+    <p id="results"></p>
+
+<script>
+    const input=document.querySelector("input");
+    const para=document.querySelector("p");
+    const button=document.querySelector("button");
+    
+   const square =num=> {
+        return num*num;
+   
+    }
+    function cube(num){
+        return num*num*num;
+    }
+    function factorial(num){
+        
+
+        for(var i=num-1; i>1;i--){
+            num*=i;
+        }
+        return num;
+    }
+    button.addEventListener("click",()=>{
+       const num= parseFloat(input.value);
+         if(isNaN(num)){
+            para.textContent="Please enter a valid number";
+        }else{
+            para.textContent= `Square: ${square(num)}
+            Cube: ${cube(num)}
+            Factorial: ${factorial(num)}`;
+        }
+    });
+    input=empty;
+</script>
+
+    
+</body>
+</html>
