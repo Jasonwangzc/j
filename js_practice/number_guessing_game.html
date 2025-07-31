@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    body {
+        
+        
+        font-family: 'Times New Roman', Times, serif;
+    }
+    
+   
+    
+    .container{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        background-color: antiquewhite;
+        border-radius: 10%;
+        border: 5px solid black;
+        width: 500px;
+        height: 500px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+     h1{
+        color: darkblue;
+        
+        
+    }
+    .rules{
+        font-size: 20px;
+        color: darkgreen;
+
+    }
+    
+
+    
+  </style>  
+</head>
+<body>
+    <div class="container">
+        <h1>Number Guessing Game</h1>
+        <p class="rules">Guess a number between 1 and 100</p>
+        <div class="input-container">
+            <input id="input_num" placeholder="Enter your guess">
+            <button id="submit">Submit</button>
+        </div>
+        <p id="message"></p>
+        <p id="result"></p>
+    </div>
+
+</body>
+<script>
+    const num = document.querySelector("input");
+    const but = document.querySelector("button");
+    const randomNum = Math.floor(Math.random() * 100) + 1;
+    const text_para = document.querySelector("#message");
+    const result_para = document.querySelector("#result");
+    let attempts = 0
+    let guesshistory = [];
+    
+    but.addEventListener("click",()=>{ 
+        const guess= parseInt(num.value);
+        attempts++;
+        if (isNaN(guess) || guess < 1 || guess > 100) {
+            text_para.textContent = "Please enter a valid number between 1 and 100.";
+            attempts-=1; // 不计入尝试次数
+            num.value = ""; // 清空输入框
+            return;
+        }
+        if (attempts > 10) {
+            alert("You have exceeded the maximum number of attempts. The answer is " + randomNum);
+            return;
+            
+        }
+        else{
+            guesshistory.push(guess);
+            let attempts = 0;
+            result_para.textContent = `Your guess history: ${guesshistory.join(" ")}`;
+            if (guess===randomNum){
+                alert("Congratulations! You've guessed the number.");
+                return;
+            
+            } else if (guess < randomNum) {
+                text_para.textContent=(` ${guess} is too low! Try again.`);
+
+            } else if (guess > randomNum) {
+                text_para.textContent=(` ${guess} is too high! Try again.`);
+            
+            }
+            else{
+                text_para.textContent="Please enter a valid number";
+            }
+        };
+        num.value = ""; // Clear the input field
+    });
+</script>
+
+</html>
